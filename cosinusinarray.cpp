@@ -1,3 +1,5 @@
+// Push cosinus function to the array in provided range.
+
 #include <iostream>
 #include <cmath>
 #include <ctime>
@@ -17,17 +19,17 @@ float Taylor(float x) {
 int main() {
 	float p, x, y = 1, a, b, n = 0;
 
-	cout << "Podaj poczatek przedzialu:" << endl;
+	cout << "Beggining of the interval:" << endl;
 	cin >> a;
-	cout << "Podaj koniec przedzialu:" << endl;
+	cout << "Ending of the interval:" << endl;
 	cin >> b;
-	cout << "Podaj przyrost:" << endl;
+	cout << "Provide increase value:" << endl;
 	cin >> p;
 
-	cout << "Tabela od lewej bedzie podawac: " << endl;
-	cout << "- wartosc argumentu x" << endl;
-	cout << "- wartosc cos(x) z funkcji bibliotecznej" << endl;
-	cout << "- wartosc cos(x) z rozwiniêcia w szereg Taylora" << endl;
+	cout << "Array would print (from the left side): " << endl;
+	cout << "- value of x argument << endl;
+	cout << "- value of cos(x) from library function" << endl;
+	cout << "- value of cos(x) from Taylor's series" << endl;
 
 	x = a;
 
