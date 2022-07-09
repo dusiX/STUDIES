@@ -1,3 +1,5 @@
+// Find surface area bounded by the axis OX and graph of the function sin(x) in range [a, b] by Monte Carlo method. 
+
 #include <iostream>
 #include <cmath>
 #include <ctime>
@@ -12,11 +14,11 @@ double rndd(double M, double N)
 int main() {
 	float y, x, a, b, pole, N, n = 1;
 
-	cout << "Podaj poczatek przedzialu:" << endl;
+	cout << "Provide beggining of the interval:" << endl;
 	cin >> a;
-	cout << "Podaj koniec przedzialu:" << endl;
+	cout << "Provide ending of the interval:" << endl;
 	cin >> b;
-	cout << "Podaj liczbe losowanych punktow:" << endl;
+	cout << "Provide a number of randomised points:" << endl;
 	cin >> N;
 
 	srand(static_cast <unsigned> (time(0)));
@@ -35,7 +37,7 @@ int main() {
 
 	pole = n / N;
 
-	cout << "Pole wynosi: " << pole << endl;
+	cout << "The surface area is: " << pole << endl;
 
 	return 0;
 }
