@@ -1,3 +1,5 @@
+// String encryption programme (like Cezar's cipher)
+
 #include<iostream>
 #include<string>
 
@@ -5,17 +7,13 @@ using namespace std;
 
 inline int sprawdz(char znak)
 {
-	//jesli jest mala litera
 	if (znak >= 'a' && znak <= 'z') return 0;
-	//jesli jest duza litera
 	if (znak >= 'A' && znak <= 'Z') return 1;
-	//inna ni¿ litera
 	return 2;
 }
 
 void szyfruj(int klucz, string& tab)
 {
-	//sprawdzenie, czy klucz miesci sie w zakresie
 	if (!(klucz >= -26 && klucz <= 26)) return;
 
 	int pom;
@@ -24,7 +22,6 @@ void szyfruj(int klucz, string& tab)
 	for (int i = 0; i < tab.size(); i++)
 	{
 		pom = sprawdz(tab[i]);
-		//ustalienie wielkosci litery
 		if (pom < 2)
 		{
 			if (pom == 0)
@@ -53,15 +50,15 @@ int main()
 
 	int klucz;
 
-	cout << "Podaj zdanie do zaszyfrowania: ";
+	cout << "Provide string to encrypt: ";
 	getline(cin, tab);
 
-	cout << "Podaj klucz z przedzia³u [-26..26]: ";
+	cout << "Provide a key in range [-26..26]: ";
 	cin >> klucz;
 
-	szyfruj(klucz, tab); //szyfrowanie
+	szyfruj(klucz, tab);
 
-	cout << "Po zaszyfrowaniu: " << tab << endl;
+	cout << "After encrypting: " << tab << endl;
 
 	return 0;
 }
