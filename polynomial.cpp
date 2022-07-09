@@ -1,3 +1,5 @@
+// Count polynomial value using Horner's diagram
+
 #include <iostream>
 using namespace std;
 
