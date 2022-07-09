@@ -1,3 +1,5 @@
+// Guess random "X" value
+
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -10,15 +12,15 @@ int main() {
 	srand(time(NULL));
 	int x = (rand() % 100);
 
-	cout << "Uwazam, ze X ma wartosc: \n";
+	cout << "I think X's value is: \n";
 	cin >> a;
 
 	if (a == x)
-		cout << "Brawo! Trafiles!";
+		cout << "Great! You made it!";
 	else
-		cout << "Nie tym razem :( \n Sprobuj jeszcze raz!";
+		cout << "Not this time \n Try once again!";
 
-	cout << "Wylosowane X ma wartosc:" << x;
+	cout << "Randomly generated X is:" << x;
 
 	return 0;
 }
