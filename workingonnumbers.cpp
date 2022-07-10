@@ -1,3 +1,7 @@
+// Programme returns a sum of the numbers squares, returns a quantity of divisors of the number, returns a sum of divisors of the numbers,
+// checks if all digits in the number are unique, returns the greatest common divisor of the numbers, returns the least common multiple of the numbers,
+// checks if the number is an element of the Fibonacci sequence and checks if the number is a multiple of squared natural number greater than 2
+
 #include <iostream>
 using namespace std;
 
@@ -131,10 +135,10 @@ int ciag(int n) {
 
 void Fibonacci(int n) {
 	if (ciag(n) == 0) {
-		cout << "Liczba nalezy do ciagu Fibonacciego" << endl;
+		cout << "The number belongs to Fibonacci sequence" << endl;
 	}
 	else
-		cout << "Liczba nie nalezy do ciagu Fibonacciego" << endl;
+		cout << "The number doesn't belong to Fibonacci sequence" << endl;
 }
 
 int wielokrotnosc(int n) {
@@ -159,46 +163,46 @@ int wielokrotnosc(int n) {
 
 int main() {
 	int n, m;
-	cout << "Podaj pierwsza liczbe: " << endl;
+	cout << "Provide first number: " << endl;
 	cin >> n;
-	cout << "Podaj druga liczbe: " << endl;
+	cout << "Provide second number: " << endl;
 	cin >> m;
 	cout << endl;
 
-	cout << "Dla liczby " << n << endl;
+	cout << "For the number " << n << endl;
 	cout << endl;
-	cout << "Suma kwadratow tej liczby to: " << sumakwadratow(n) << endl;
-	cout << "Ilosc podzielnikow tej liczby to: " << liczbapodzielnikow(n) << endl;
-	cout << "Suma podzielnikow tej liczby to: " << sumapodzielnikow(n) << endl;
+	cout << "The sum of the squares of this number is: " << sumakwadratow(n) << endl;
+	cout << "The quantity of divisors of this number is: " << liczbapodzielnikow(n) << endl;
+	cout << "The sum of the divisors of this number is: " << sumapodzielnikow(n) << endl;
 	if (liczbyunikalne(n) == 0)
-		cout << "Cyfry w tej liczbie wystepuja mniej niz raz, czyli sa unikalne" << endl;
-	else cout << "Cyfry w tej liczbie wystepuja wiecej niz raz, czyli nie sa unikalne" << endl;
+		cout << "The digits in this number appear less than once, which means they are unique" << endl;
+	else cout << "The digits in this number appear more than once, which means they aren't unique" << endl;
 	Fibonacci(n);
 	if (wielokrotnosc(n) == 0)
-		cout << "Ta liczba jest wielokrotnoscia kwadratu liczby calkowitej wiekszej od 2" << endl;
+		cout << "This number is a multiple of the square of an integer greater than 2" << endl;
 	else
-		cout << "Ta liczba nie jest wielokrotnoscia kwadratu liczby calkowitej wiekszej od 2" << endl;
+		cout << "This number isn't a multiple of the square of an integer greater than 2" << endl;
 	cout << endl;
 	cout << endl;
 
-	cout << "Dla liczby " << m << endl;
+	cout << "For the number " << m << endl;
 	cout << endl;
-	cout << "Suma kwadratow tej liczby to: " << sumakwadratow(m) << endl;
-	cout << "Ilosc podzielnikow tej liczby to: " << liczbapodzielnikow(m) << endl;
-	cout << "Suma podzielnikow tej liczby to: " << sumapodzielnikow(m) << endl;
+	cout << "The sum of the squares of this number is: " << sumakwadratow(m) << endl;
+	cout << "The quantity of divisors of this number is: " << liczbapodzielnikow(m) << endl;
+	cout << "The sum of the divisors of this number is: " << sumapodzielnikow(m) << endl;
 	if (liczbyunikalne(m) == 0)
-		cout << "Cyfry w tej liczbie wystepuja mniej niz raz, czyli sa unikalne" << endl;
-	else cout << "Cyfry w tej liczbie wystepuja wiecej niz raz, czyli nie sa unikalne" << endl;
+		cout << "The digits in this number appear less than once, which means they are unique" << endl;
+	else cout << "The digits in this number appear more than once, which means they aren't unique" << endl;
 	Fibonacci(m);
 	if (wielokrotnosc(m) == 0)
-		cout << "Ta liczba jest wielokrotnoscia kwadratu liczby calkowitej wiekszej od 2" << endl;
+		cout << "This number is a multiple of the square of an integer greater than 2" << endl;
 	else
-		cout << "Ta liczba nie jest wielokrotnoscia kwadratu liczby calkowitej wiekszej od 2" << endl;
+		cout << "This number isn't a multiple of the square of an integer greater than 2" << endl;
 	cout << endl;
 	cout << endl;
 
-	cout << "Najwiekszy wspolny dzielnik tych liczb to: " << NWD(n, m) << endl;
-	cout << "Najmniejsza wspolna wielokrotnosc tych liczb to: " << NWW(n, m) << endl;
+	cout << "The greatest common divisor of these numbers is: " << NWD(n, m) << endl;
+	cout << "The least common multiple of these numbers is: " << NWW(n, m) << endl;
 
 	return 0;
 }
