@@ -1,3 +1,5 @@
+// Programme prints every prime number in range [m, n] of given number and returns their quantity
+
 #include <iostream>
 
 using namespace std;
@@ -13,7 +15,7 @@ bool is_prime(int n) {
 }
 
 void print_primes(int m, int n){
-	cout << "Wszystkie liczby z przedzialu od " << m << " do " << n << " to: " << endl;
+	cout << "All numbers in range from " << m << " to " << n << " are: " << endl;
 	while (j <= n) {
 		if (j >= m) {
 			if (is_prime(j) == 0) {
@@ -39,7 +41,7 @@ int num_primes(int m, int n) {
 
 int glowny(int m, int n) {
 	print_primes(m, n);
-	cout << "Ilosc liczb pierwszych w danym przedziale: " << num_primes(m, n) << endl;
+	cout << "Quantity of prime numbers in given range: " << num_primes(m, n) << endl;
 	return 0;
 }
 
