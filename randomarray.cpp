@@ -1,3 +1,5 @@
+// Array of 15 random alphabetical digits
+
 #include <iostream>
 using namespace std;
 
