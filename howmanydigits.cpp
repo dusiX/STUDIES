@@ -1,3 +1,5 @@
+// Programme will show how many digits are divisible by 3 and non-divisible by 7 in range 0-50, 50-100 and 100-150
+
 #include <iostream>
 
 using namespace std;
@@ -17,7 +19,7 @@ int ileliczb(int a, int b) {
 }
 
 void pokaz(int a, int b) {
-    cout << "Od "<< a+1 << " do "<< b << " jest "<< ileliczb(a,b)<< " liczb" << endl;
+    cout << "From "<< a+1 << " to "<< b << " there are "<< ileliczb(a,b)<< " digits" << endl;
 }
 
 int main()
