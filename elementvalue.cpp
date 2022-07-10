@@ -1,5 +1,6 @@
-#include <iostream>
+//Programme returns value of the element of n degree of the number A
 
+#include <iostream>
 
 using namespace std;
 
@@ -22,11 +23,11 @@ int main() {
 	double a;
 	int n;
 
-	cout << "Podaj liczbe" << endl;
+	cout << "Provide a number:" << endl;
 	cin >> a;
-	cout << "Podaj stopien pierwiastka" << endl;
+	cout << "Provide the degree of the element" << endl;
 	cin >> n;
-	cout << "Pierwiastkiem " << n << "-tego stopnia z liczby " << a << " wynosi " << pierwiastek(a, n) << endl;
+	cout << "The element of " << n << " degree of the number " << a << " is " << pierwiastek(a, n) << endl;
 
 
 	return 0;
