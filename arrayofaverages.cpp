@@ -1,3 +1,6 @@
+// Programme with array of 20 random integers in range [0, 100) which prints a sum and an arithmetic average of all numbers written in the array.
+// Calculations are repeated 30 times and provided to a new array which average, minimum and maximum value is printed
+
 #include <iostream>
 using namespace std;
 
@@ -20,10 +23,10 @@ int main() {
 			suma += A[i];
 		}
 		cout << endl;
-		cout <<"Suma liczb wynosi " << suma << endl;
+		cout <<"The sum of the numbers is " << suma << endl;
 
 		srednia = suma / 20;
-		cout << "Srednia wynosi " << srednia << endl;
+		cout << "The arithmetic average is " << srednia << endl;
 		suma = 0;
 		B[j] = srednia;
 		sumasrednich += B[j];
@@ -34,9 +37,9 @@ int main() {
 	}
 	cout << endl;
 	sredsrednich = sumasrednich / 30;
-	cout << "Srednia srednich to " << sredsrednich << endl;
-	cout << "Minimalna srednia to " << min << endl;
-	cout << "Maksymalna srednia to " << max << endl;
+	cout << "Tha sum of the averages is " << sredsrednich << endl;
+	cout << "Minimum value within averages is " << min << endl;
+	cout << "Maximum value within averages is " << max << endl;
 
 	return 0;
 }
