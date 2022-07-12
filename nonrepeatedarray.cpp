@@ -1,3 +1,5 @@
+// Programme sorts provided arrays and returns third array filled with non-repeated numbers from first and second array
+
 #include <iostream>
 
 using namespace std;
