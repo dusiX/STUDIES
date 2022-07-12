@@ -25,7 +25,7 @@ int merge(int t1[], int N1, int t2[], int N2) {
 
 	cout << endl;
 	cout << endl;
-	cout << "Trzecia tablica nieposortowana" << endl;
+	cout << "Third non-sorted array " << endl;
 
 	for (int i = 0; i < M; i++) {
 		cout << t3[i] << " ";
@@ -59,7 +59,7 @@ int merge(int t1[], int N1, int t2[], int N2) {
 
 	M = x;
 
-	cout << "Trzecia tablica posortowana" << endl;
+	cout << "Third sorted array " << endl;
 
 	for (int i = 0; i < M; i++) {
 		cout << t3[i] << " ";
@@ -74,17 +74,17 @@ int main() {
 
 	int N1, N2, M;
 
-	cout << "Podaj wielkosc pierwszej tablicy" << endl;
+	cout << "Provide size of first array" << endl;
 	cin >> N1;
 	cout << endl;
-	cout << "Podaj wielkosc drugiej tablicy" << endl;
+	cout << "Provide size of second array" << endl;
 	cin >> N2;
 
 	int* t1 = new int[N1];
 	int* t2 = new int[N2];
 
 	cout << endl;
-	cout << "Pierwsza tablica nieposortowana" << endl;
+	cout << "First non-sorted array" << endl;
 
 	for (int i = 0; i < N1; i++) {
 		t1[i] = rndi(0, 11);
@@ -93,7 +93,7 @@ int main() {
 
 	cout << endl;
 	cout << endl;
-	cout << "Druga tablica nieposortowana" << endl;
+	cout << "Second non-sorted array" << endl;
 
 	for (int i = 0; i < N2; i++) {
 		t2[i] = rndi(0, 11);
@@ -113,7 +113,7 @@ int main() {
 				swap(t2[j - 1], t2[j]);
 
 	cout << endl;
-	cout << "Pierwsza tablica posortowana" << endl;
+	cout << "First sorted array" << endl;
 
 	for (int i = 0; i < N1; i++) {
 		cout << t1[i] << " ";
@@ -121,7 +121,7 @@ int main() {
 
 	cout << endl;
 	cout << endl;
-	cout << "Druga tablica posortowana" << endl;
+	cout << "Second sorted array" << endl;
 
 	for (int i = 0; i < N2; i++) {
 		cout << t2[i] << " ";
@@ -132,7 +132,7 @@ int main() {
 	M = merge(t1, N1, t2, N2);
 
 	cout << endl;
-	cout << "Wielkosc wynikowej tablicy to " << M << endl;
+	cout << "Size of the resulting array is " << M << endl;
 
 	delete[]t1;
 	delete[]t2;
