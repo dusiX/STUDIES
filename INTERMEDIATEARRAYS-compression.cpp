@@ -1,3 +1,5 @@
+//Programme loads text and makes compression of the text or loads text and makes decompression of the text
+
 #include <iostream>
 
 using namespace std;
