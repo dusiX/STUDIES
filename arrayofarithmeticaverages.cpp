@@ -1,3 +1,6 @@
+// Programme loads a size of an array filled with random numbers from 0 to 100, then creates a second array which is filled with arithmetic averages of 
+// consecutive pairs of numbers 
+
 #include <iostream>
 
 using namespace std;
@@ -10,7 +13,7 @@ int main() {
 	srand(time(nullptr));
 	int N = 10, i, j = 0, M = 10;
 
-	cout << "Podaj wielkosc pierwszej tablicy " << endl;
+	cout << "Provide size of first array " << endl;
 	cin >> N;
 
 	double* t1 = new double[N];
@@ -28,7 +31,7 @@ int main() {
 
 
 	cout << endl;
-	cout << "Twoja tablica o wymiarach " << N << ":" << endl;
+	cout << "Your array with dimensions " << N << ":" << endl;
 
 
 	for (i = 0; i < N; i++) {
@@ -37,7 +40,7 @@ int main() {
 	cout << endl;
 
 	cout << endl;
-	cout << "Tablica srednich arytmetycznych o wymiarze " << M << ":" << endl;
+	cout << "Array of arithmetic averages with dimensions " << M << ":" << endl;
 
 	for (i = 0; i < M; i++) {
 		if (j + 1 < N) {
