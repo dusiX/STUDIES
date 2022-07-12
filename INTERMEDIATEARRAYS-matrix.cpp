@@ -1,3 +1,5 @@
+// Programme loads squared matrix and checks if it is triangular
+
 #include <iostream>
 
 using namespace std;
