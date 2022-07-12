@@ -1,3 +1,5 @@
+//Programme draws two numbers and counts their product
+
 #include <iostream>
 #include <cmath>
 using namespace std;
@@ -18,7 +20,7 @@ int main() {
 	long int b = 0;
 	b = liczba(b);
 
-	cout << "Iloczyn liczb " << a << " i " << b << " to " << a * b << endl;
+	cout << "The product of the numbers " << a << " and " << b << " is " << a * b << endl;
 
 	return 0;
 }
