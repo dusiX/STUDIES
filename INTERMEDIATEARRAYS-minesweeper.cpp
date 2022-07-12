@@ -1,3 +1,5 @@
+// Programme loads size of an array filled with random numbers in range [0, 1] and sums up adjacent numbers
+
 #include <iostream>
 #include <random>
 #include <time.h>
@@ -21,10 +23,10 @@ int main() {
 
 	srand(time(NULL));
 
-	cout << "Podaj wielkosc tablicy:" << endl;
+	cout << "Provide size of an array:" << endl;
 	cin >> n;
 	cout << endl;
-	cout << "Podaj odleglosc, w ktorej mierzona ma byc suma:" << endl;
+	cout << "Provide the distance over which the sum is to be measured:" << endl;
 	cin >> r;
 	cout << endl;
 	cout << endl;
@@ -47,9 +49,9 @@ int main() {
 		}
 	}
 
-	cout << "Wielkosc tablicy to " << n << "x" << n << ", a maksymalna odleglosc wynosi " << r << endl;
+	cout << "Size of the array is " << n << "x" << n << " and a maximum distance is " << r << endl;
 	cout << endl;
-	cout << "Oryginalna tablica wyglada tak:" << endl;
+	cout << "Original array looks like this:" << endl;
 	cout << endl;
 
 	for (int i = 0; i < n; i++) {
@@ -87,7 +89,7 @@ int main() {
 		}
 	}
 
-	cout << "Wygenerowana tablica po zsumowaniu wyglada tak:" << endl;
+	cout << "Generated and summed array looks like this:" << endl;
 	cout << endl;
 
 	for (int i = 0; i < n; i++) {
