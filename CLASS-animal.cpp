@@ -1,3 +1,6 @@
+// Programme including class which has name and age of the animal and prints data of these animals. There are also classes inheriting from Animal class: 
+// Horse class, which includes breed and height of the horse, and Dog class, which includes weight of the dog.
+
 #include <iostream>
 
 using namespace std;
@@ -18,8 +21,8 @@ public:
     }
 
     void print() {
-        cout << "Imie zwierzecia: " << name << endl;
-        cout << "Wiek zwierzecia: " << age << endl;
+        cout << "Name of an animal: " << name << endl;
+        cout << "Age of an animal: " << age << endl;
         cout << endl;
     }
 
@@ -51,10 +54,10 @@ public:
     };
 
     void print() {
-        cout << "Imie konia: " << name << endl;
-        cout << "Wiek konia: " << age << endl;
-        cout << "Rasa konia: " << breed << endl;
-        cout << "Wzrost konia: " << height << endl;
+        cout << "Name of the horse: " << name << endl;
+        cout << "Age of the horse: " << age << endl;
+        cout << "Breed of the horse: " << breed << endl;
+        cout << "Height of the horse: " << height << endl;
         cout << endl;
     }
 
@@ -74,9 +77,9 @@ public:
     };
 
     void print() {
-        cout << "Imie psa: " << name << endl;
-        cout << "Wiek psa: " << age << endl;
-        cout << "Waga psa: " << weight << endl;
+        cout << "Name of the dog: " << name << endl;
+        cout << "Age of the dog: " << age << endl;
+        cout << "Weight of the dog: " << weight << endl;
         cout << endl;
     }
 
