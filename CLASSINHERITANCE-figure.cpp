@@ -1,3 +1,7 @@
+// Programme including Figure class which has coordinates of the figure's anchor point on the plane. There are also classes inheriting from Figure class:
+// Rectangle class, which includes width and height of a rectangle, and Circle class, which includes radius of a circle. Both of them have a function including 
+// area of a figure
+
 #include <iostream>
 #include <cmath>
 
@@ -56,9 +60,9 @@ public:
     }
 
     void print() {
-        cout << "Wspolrzedne punktu: [" << x << ", " << y << "]" << endl;
-        cout << "Wymiary prostokata: " << width << "x" << height << endl;
-        cout << "Pole prostokata: " << area() << endl;
+        cout << "Coordinates of the point: [" << x << ", " << y << "]" << endl;
+        cout << "Rectangle dimensions: " << width << "x" << height << endl;
+        cout << "Area of the rectangle: " << area() << endl;
     }
 
 };
@@ -82,9 +86,9 @@ public:
     }
 
     void print() {
-        cout << "Wspolrzedne punktu: [" << x << ", " << y << "]" << endl;
-        cout << "Promien kola: " << radius << endl;
-        cout << "Pole kola: " << area() << endl;
+        cout << "Coordinates of the point: [" << x << ", " << y << "]" << endl;
+        cout << "Circle's radius: " << radius << endl;
+        cout << "Area of the circle: " << area() << endl;
     }
 
 };
