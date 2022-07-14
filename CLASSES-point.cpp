@@ -1,3 +1,5 @@
+// Programme including class which shows a point
+
 #include <iostream>
 
 using namespace std;
