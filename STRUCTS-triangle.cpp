@@ -1,3 +1,6 @@
+// Programme including struct which checks if triangle is equilateral, isosceles or rectangular, prints coordinates of the points of the triangle,
+// returns area and perimeter of a triangle
+
 #include <iostream>
 #include <cmath>
 
@@ -36,11 +39,11 @@ struct Triangle {
 
 	bool isTriangle() {
 		if ((ab + ac > bc) && (ac + bc > ab) && (bc + ab > ac)) {
-			cout << "Trojkat jest git :)" << endl;
+			cout << "Triangle is ok :)" << endl;
 			return true;
 		}
 		else {
-			cout << "Trojkat nie jest git :(" << endl;
+			cout << "Triangle is not ok :(" << endl;
 			return false;
 		}
 	}
@@ -117,39 +120,39 @@ struct Triangle {
 
 	bool isEquilateral() {
 		if ((ab == ac) && (ac == bc)) {
-			cout << "Trojkat jest rownoboczny" << endl;
+			cout << "Triangle is equilateral" << endl;
 			return true;
 		}
 		else {
-			cout << "Trojkat nie jest rownoboczny" << endl;
+			cout << "Triangle is not equilateral" << endl;
 		}
 		return false;
 	}
 
 	bool isIsosceles() {
 		if (ab == ac || ac == bc || bc == ab) {
-			cout << "Trojkat jest rownoramienny" << endl;
+			cout << "Triangle is isosceles" << endl;
 			return true;
 		}
 		else {
-			cout << "Trojkat nie jest rownoramienny" << endl;
+			cout << "Triangle is not isosceles" << endl;
 		}
 		return false;
 	}
 
 	bool isRectangular() {
 		if (abs(ab * ab + bc * bc - ac * ac) < 0.00001 || abs(bc * bc + ac * ac - ab * ab) < 0.00001 || abs(ac * ac + ab * ab - bc * bc) < 0.00001) {
-			cout << "Trojkat jest prostokatny" << endl;
+			cout << "Triangle is rectangular" << endl;
 			return true;
 		}
 		else {
-			cout << "Trojkat nie jest prostokatny" << endl;
+			cout << "Triangle is not rectangular" << endl;
 		}
 		return false;
 	}
 
 	void print() {
-		cout << "Wspolrzedne trojkata to: " << endl;
+		cout << "Coordinates of the triangle are: " << endl;
 		cout << "(" << "[" << a.x << ", " << a.y << "]" << ", " << "[" << b.x << ", " << b.y << "]" << ", " << "[" << c.x << ", " << c.y << "]" << ")" << endl;
 	}
 
@@ -157,13 +160,13 @@ struct Triangle {
 		obw = ab + ac + bc;
 
 		pol = sqrt((obw / 2) * ((obw / 2) - ab) * ((obw / 2) - ac) * ((obw / 2) - bc));
-		cout << "Pole trojkata wynosi: " << pol << endl;
+		cout << "Area of the triangle is: " << pol << endl;
 		return 0;
 	}
 
 	double perimeter() {
 		obw = ab + ac + bc;
-		cout << "Obwod trojkata wynosi: " << obw << endl;
+		cout << "Perimeter of the triangle is: " << obw << endl;
 		return 0;
 	}
 
@@ -175,19 +178,19 @@ int main() {
 
 	Point* p1 = new Point(4.2, 8.1);
 
-	cout << "Wpisz wspolrzedne pierwszego punktu: " << endl << "x: ";
+	cout << "Provide coordinates of the first point: " << endl << "x: ";
 	cin >> a;
 	cout << "y: ";
 	cin >> b;
 	cout << endl;
 
-	cout << "Wpisz wspolrzedne drugiego punktu: " << endl << "x: ";
+	cout << "Provide coordinates of the second point: " << endl << "x: ";
 	cin >> c;
 	cout << "y: ";
 	cin >> d;
 	cout << endl;
 
-	cout << "Wpisz wspolrzedne trzeciego punktu: " << endl << "x: ";
+	cout << "Provide coordinates of the third point: " << endl << "x: ";
 	cin >> e;
 	cout << "y: ";
 	cin >> f;
