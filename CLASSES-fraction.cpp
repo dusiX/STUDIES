@@ -1,3 +1,5 @@
+// Programme including class which adds, multiplies, reduces and returns fraction
+
 #include <iostream>
 
 using namespace std;
@@ -17,7 +19,7 @@ public:
 
 	bool zero() {
 		if (y == 0) {
-			cout << "BLAD" << endl;
+			cout << "ERROR" << endl;
 		}
 		return false;
 	}
@@ -58,10 +60,10 @@ public:
 	void print() {
 		reduce();
 		zero();
-		cout << "Ulamek to: " << x << "/" << y << endl;
-		cout << "Ulamek w postaci liczby rzeczywistej: " << evaluate() << endl;
-		cout << "Ulamek po dodaniu: " << add() << endl;
-		cout << "Ulamek po pomnozeniu: " << mult() << endl;
+		cout << "The fraction is: " << x << "/" << y << endl;
+		cout << "The fraction in the form of a real number: " << evaluate() << endl;
+		cout << "A sum of the fractions: " << add() << endl;
+		cout << "A product of the fractions: " << mult() << endl;
 	}
 
 	float evaluate() {
@@ -77,9 +79,9 @@ public:
 int main() {
 	int x, y;
 
-	cout << "Podaj licznik: " << endl;
+	cout << "Provide meter: " << endl;
 	cin >> x;
-	cout << "Podaj mianownik: " << endl;
+	cout << "Provide denominator: " << endl;
 	cin >> y;
 
 	Fraction f(x, y);
