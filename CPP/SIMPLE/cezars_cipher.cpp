@@ -5,23 +5,23 @@
 
 using namespace std;
 
-inline int sprawdz(char znak)
+inline int check(char c)
 {
-	if (znak >= 'a' && znak <= 'z') return 0;
-	if (znak >= 'A' && znak <= 'Z') return 1;
+	if (c >= 'a' && c <= 'z') return 0;
+	if (c >= 'A' && c <= 'Z') return 1;
 	return 2;
 }
 
-void szyfruj(int klucz, string& tab)
+void encrypt(int key, string& tab)
 {
-	if (!(klucz >= -26 && klucz <= 26)) return;
+	if (!(key >= -26 && key <= 26)) return;
 
 	int pom;
 	char a, z;
 
 	for (int i = 0; i < tab.size(); i++)
 	{
-		pom = sprawdz(tab[i]);
+		pom = check(tab[i]);
 		if (pom < 2)
 		{
 			if (pom == 0)
@@ -29,17 +29,17 @@ void szyfruj(int klucz, string& tab)
 			else
 				a = 'A', z = 'Z';
 
-			if (klucz >= 0)
+			if (key >= 0)
 
-				if (tab[i] + klucz <= z)
-					tab[i] += klucz;
+				if (tab[i] + key <= z)
+					tab[i] += key;
 				else
-					tab[i] = tab[i] + klucz - 26;
+					tab[i] = tab[i] + key - 26;
 			else
-				if (tab[i] + klucz >= a)
-					tab[i] += klucz;
+				if (tab[i] + key >= a)
+					tab[i] += key;
 				else
-					tab[i] = tab[i] + klucz + 26;
+					tab[i] = tab[i] + key + 26;
 		}
 	}
 }
@@ -48,15 +48,15 @@ int main()
 {
 	string tab;
 
-	int klucz;
+	int key;
 
 	cout << "Provide string to encrypt: ";
 	getline(cin, tab);
 
 	cout << "Provide a key in range [-26..26]: ";
-	cin >> klucz;
+	cin >> key;
 
-	szyfruj(klucz, tab);
+	encrypt(key, tab);
 
 	cout << "After encrypting: " << tab << endl;
 
