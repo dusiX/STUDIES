@@ -7,7 +7,7 @@ using namespace std;
 class Fraction {
 private:
 
-	float dod, mno, r, x, y;
+	float add, multiply, r, x, y;
 	int i;
 
 public:
@@ -34,15 +34,15 @@ public:
 	float add() {
 		zero();
 		reduce();
-		dod = (x + x) / y;
-		return dod;
+		add = (x + x) / y;
+		return add;
 	}
 
-	float mult() {
+	float multiply() {
 		zero();
 		reduce();
-		mno = (x * x) / (y * y);
-		return mno;
+		multiply = (x * x) / (y * y);
+		return multiply;
 	}
 
 	void reduce() {
@@ -63,7 +63,7 @@ public:
 		cout << "The fraction is: " << x << "/" << y << endl;
 		cout << "The fraction in the form of a real number: " << evaluate() << endl;
 		cout << "A sum of the fractions: " << add() << endl;
-		cout << "A product of the fractions: " << mult() << endl;
+		cout << "A product of the fractions: " << multiply() << endl;
 	}
 
 	float evaluate() {
