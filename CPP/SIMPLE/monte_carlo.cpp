@@ -12,7 +12,7 @@ double rndd(double M, double N)
 }
 
 int main() {
-	float y, x, a, b, pole, N, n = 1;
+	float y, x, a, b, area, N, n = 1;
 
 	cout << "Provide beggining of the interval:" << endl;
 	cin >> a;
@@ -35,9 +35,9 @@ int main() {
 		}
 	}
 
-	pole = n / N;
+	area = n / N;
 
-	cout << "The surface area is: " << pole << endl;
+	cout << "The surface area is: " << area << endl;
 
 	return 0;
 }
