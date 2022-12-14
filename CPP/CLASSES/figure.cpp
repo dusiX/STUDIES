@@ -55,8 +55,8 @@ public:
     }
 
     double area() {
-        pole = width * height;
-        return pole;
+        area = width * height;
+        return area;
     }
 
     void print() {
@@ -72,7 +72,7 @@ class Circle
     int x, y;
 public:
     double radius;
-    float pole;
+    float area;
 
     Circle(int a, int b, double c) {
         this->x = a;
@@ -81,8 +81,8 @@ public:
     }
 
     double area() {
-        pole = (M_PI * radius) * (M_PI * radius);
-        return pole;
+        area = (M_PI * radius) * (M_PI * radius);
+        return area;
     }
 
     void print() {
