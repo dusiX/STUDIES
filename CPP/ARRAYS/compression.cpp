@@ -7,8 +7,8 @@ using namespace std;
 int main(int argc, char* argv[])
 {
     if (argc == 3) {
-        int i, licz = 0, powt = 0;
-        char c, c1, d, ile;
+        int i, count = 0, repeat = 0;
+        char c, c1, d, sum;
         string str(argv[2]);
         cout << str << endl;
         char output[1000];
@@ -19,33 +19,33 @@ int main(int argc, char* argv[])
             for (i = 1; i < str.length(); i++) {
                 c1 = str[i];
                 if (c == c1) {
-                    powt++;
+                    repeat++;
                     if (i == (str.length() - 1)) {
-                        output[licz++] = '[';
-                        output[licz++] = 49 + powt;
-                        output[licz++] = c;
-                        output[licz++] = ']';
+                        output[count++] = '[';
+                        output[count++] = 49 + repeat;
+                        output[count++] = c;
+                        output[count++] = ']';
                         war = true;
                     }
                 }
                 else {
-                    if (powt == 0) {
-                        output[licz++] = c;
+                    if (repeat == 0) {
+                        output[count++] = c;
                     }
                     else {
-                        output[licz++] = '[';
-                        output[licz++] = 49 + powt;
-                        output[licz++] = c;
-                        output[licz++] = ']';
-                        powt = 0;
+                        output[count++] = '[';
+                        output[count++] = 49 + repeat;
+                        output[count++] = c;
+                        output[count++] = ']';
+                        repeat = 0;
                     }
                 }
                 c = c1;
             }
             if (!war) {
-                output[licz++] = c;
+                output[count++] = c;
             }
-            output[licz] = '\0';
+            output[count] = '\0';
             string s(output);
             cout << s;
         }
@@ -55,18 +55,18 @@ int main(int argc, char* argv[])
                 d = str[i];
                 if (str[i] == '[') {
                     i++;
-                    ile = (str[i++] - 48);
+                    sum = (str[i++] - 48);
                     d = str[i];
-                    for (int j = 1; j <= ile; j++) {
-                        output[licz++] = d;
+                    for (int j = 1; j <= sum; j++) {
+                        output[count++] = d;
                     }
                     i++;
                 }
                 else {
-                    output[licz++] = d;
+                    output[count++] = d;
                 }
             }
-            output[licz] = '\0';
+            output[count] = '\0';
             string s(output);
             cout << s;
         }
