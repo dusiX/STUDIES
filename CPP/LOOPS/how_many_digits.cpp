@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int ileliczb(int a, int b) {
+int howmany(int a, int b) {
     int i, j = 0;
 
     for (i = a+1; i <= b; i++) {
@@ -18,14 +18,14 @@ int ileliczb(int a, int b) {
     return j;
 }
 
-void pokaz(int a, int b) {
-    cout << "From "<< a+1 << " to "<< b << " there are "<< ileliczb(a,b)<< " digits" << endl;
+void show(int a, int b) {
+    cout << "From "<< a+1 << " to "<< b << " there are "<< howmany(a,b)<< " digits" << endl;
 }
 
 int main()
 {
     for (int i = 0; i < 3; i++) {
-        pokaz(i * 50, (i + 1) * 50);
+        show(i * 50, (i + 1) * 50);
     }
     return 0;
 }
