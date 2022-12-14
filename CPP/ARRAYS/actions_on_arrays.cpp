@@ -9,9 +9,9 @@ long rndi(int a, int b) {
 }
 
 int main() {
-	float A[20], B[30], suma = 0, sumasrednich = 0;
+	float A[20], B[30], sum = 0, sumofaverages = 0;
 	int j;
-	float srednia, sredsrednich, min, max;
+	float average, averageofaverages, min, max;
 	srand(time(nullptr));
 	min = 100;
 	max = 0;
@@ -20,24 +20,24 @@ int main() {
 		for (int i = 0; i < 20; i++) {
 			A[i] = rndi(0, 100);
 			cout << A[i] << " ";
-			suma += A[i];
+			sum += A[i];
 		}
 		cout << endl;
-		cout <<"The sum of the numbers is " << suma << endl;
+		cout <<"The sum of the numbers is " << sum << endl;
 
-		srednia = suma / 20;
-		cout << "The arithmetic average is " << srednia << endl;
-		suma = 0;
-		B[j] = srednia;
-		sumasrednich += B[j];
+		average = sum / 20;
+		cout << "The arithmetic average is " << average << endl;
+		sum = 0;
+		B[j] = average;
+		averageofaverages += B[j];
 		if (B[j] < min) min = B[j];
 		if (B[j] > max) max = B[j];
 		cout << endl;
-		srednia = 0;
+		average = 0;
 	}
 	cout << endl;
-	sredsrednich = sumasrednich / 30;
-	cout << "Tha sum of the averages is " << sredsrednich << endl;
+	averageofaverages = sumofaverages / 30;
+	cout << "Tha sum of the averages is " << averageofaverages << endl;
 	cout << "Minimum value within averages is " << min << endl;
 	cout << "Maximum value within averages is " << max << endl;
 
