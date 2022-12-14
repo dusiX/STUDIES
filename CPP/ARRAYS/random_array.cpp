@@ -9,17 +9,17 @@ long rndi(int a, int b) {
 
 int main() {
 	srand(time(nullptr));
-	char znaki[15];
+	char chars[15];
 	for (int i = 0; i < 15; i++) {
-		znaki[i] = rndi(97, 123);
-		cout << znaki[i] << " ";
+		chars[i] = rndi(97, 123);
+		cout << chars[i] << " ";
 	}
 
 	cout << endl;
 
 	for (int i = 14; i >= 0; i--) {
-		znaki[i] = znaki[i] - 32;
-		cout << znaki[i] << " ";
+		chars[i] = chars[i] - 32;
+		cout << chars[i] << " ";
 	}
 
 	return 0;
