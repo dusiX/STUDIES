@@ -1,10 +1,10 @@
-//Programme returns value of the element of n degree of the number A
+//Programme returns value of the root of n degree of the number A
 
 #include <iostream>
 
 using namespace std;
 
-double pierwiastek(double a, int n) {
+double root(double a, int n) {
 	double sp, p = a, xk = 1;
 	do {
 		sp = p;
@@ -27,7 +27,7 @@ int main() {
 	cin >> a;
 	cout << "Provide the degree of the element" << endl;
 	cin >> n;
-	cout << "The element of " << n << " degree of the number " << a << " is " << pierwiastek(a, n) << endl;
+	cout << "The root of " << n << " degree of the number " << a << " is " << root(a, n) << endl;
 
 
 	return 0;
