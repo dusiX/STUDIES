@@ -5,22 +5,22 @@
 #include <iostream>
 using namespace std;
 
-int sumakwadratow(int n) {
-	long int kwadraty = 0;
-	int reszta = 1;
+int sumofsquares(int n) {
+	long int squares = 0;
+	int rest = 1;
 	int i = 1;
-	for (i = 1; reszta != 0; i++) {
-		reszta = n % 10;
-		if (reszta != 0)
-			kwadraty = kwadraty + (reszta * reszta);
-		n = n - reszta;
+	for (i = 1; rest != 0; i++) {
+		rest = n % 10;
+		if (rest != 0)
+			squares = squares + (rest * rest);
+		n = n - rest;
 		n = n / 10;
 	}
 
-	return kwadraty;
+	return squares;
 }
 
-int liczbapodzielnikow(int n) {
+int numberofdivisors(int n) {
 	int i = 0, j = 1;
 	for (j = 1; j <= n; j++) {
 		if (n % j == 0)
@@ -29,19 +29,19 @@ int liczbapodzielnikow(int n) {
 	return i;
 }
 
-int sumapodzielnikow(int n) {
-	int suma = 0, j = 1;
+int sumofdivisors(int n) {
+	int sum = 0, j = 1;
 	for (j = 1; j <= n; j++) {
 		if (n % j == 0)
-			suma += j;
+			sum += j;
 	}
-	return suma;
+	return sum;
 }
 
-int liczba(int n, int reszta, int a, int k) {
-	while (reszta != 0) {
-		reszta = n % 10;
-		if (reszta == a)
+int number(int n, int rest, int a, int k) {
+	while (rest != 0) {
+		rest = n % 10;
+		if (rest == a)
 			k++;
 		if (k > 1) {
 			return 1;
@@ -51,21 +51,21 @@ int liczba(int n, int reszta, int a, int k) {
 	return 0;
 }
 
-int liczbyunikalne(int n) {
-	int i = 1, reszta = 1, k = 0, a = 0;
+int uniquenumbers(int n) {
+	int i = 1, rest = 1, k = 0, a = 0;
 	for (a = 0; a < 10; k = 0) {
-		if (liczba(n, reszta, a, k) == 1) {
+		if (number(n, rest, a, k) == 1) {
 			return 1;
 		}
 		else {
-			reszta = 1;
+			rest = 1;
 			a++;
 		}
 	}
 	return 0;
 }
 
-int NWD(int n, int m) {
+int greatestcommondivisor(int n, int m) {
 	while (n != m) {
 		if (m > n) {
 			m -= n;
@@ -82,7 +82,7 @@ int NWD(int n, int m) {
 	}
 }
 
-int NWW(int n, int m) {
+int leastcommonmultiple(int n, int m) {
 	if (m != n) {
 		if (n > m) {
 			if (n % m == 0) {
@@ -91,8 +91,8 @@ int NWW(int n, int m) {
 			else {
 				int x;
 				x = m * n;
-				if (NWD(n, m) != 1) {
-					x /= NWD(n, m);
+				if (greatestcommondivisor(n, m) != 1) {
+					x /= greatestcommondivisor(n, m);
 				}
 				return x;
 			}
@@ -104,8 +104,8 @@ int NWW(int n, int m) {
 			else {
 				int x;
 				x = m * n;
-				if (NWD(n, m) != 1) {
-					x /= NWD(n, m);
+				if (greatestcommondivisor(n, m) != 1) {
+					x /= greatestcommondivisor(n, m);
 				}
 				return x;
 			}
@@ -114,7 +114,7 @@ int NWW(int n, int m) {
 		return m;
 }
 
-int ciag(int n) {
+int sequence(int n) {
 	int a = 0, b = 1, c;
 	c = a + b;
 	while (c <= n) {
@@ -134,14 +134,14 @@ int ciag(int n) {
 }
 
 void Fibonacci(int n) {
-	if (ciag(n) == 0) {
+	if (sequence(n) == 0) {
 		cout << "The number belongs to Fibonacci sequence" << endl;
 	}
 	else
 		cout << "The number doesn't belong to Fibonacci sequence" << endl;
 }
 
-int wielokrotnosc(int n) {
+int multiple(int n) {
 	int k, i, x;
 	for (i = 3; i < n; i++) {
 		k = i * i;
@@ -171,14 +171,14 @@ int main() {
 
 	cout << "For the number " << n << endl;
 	cout << endl;
-	cout << "The sum of the squares of this number is: " << sumakwadratow(n) << endl;
-	cout << "The quantity of divisors of this number is: " << liczbapodzielnikow(n) << endl;
-	cout << "The sum of the divisors of this number is: " << sumapodzielnikow(n) << endl;
-	if (liczbyunikalne(n) == 0)
+	cout << "The sum of the squares of this number is: " << sumofsquares(n) << endl;
+	cout << "The quantity of divisors of this number is: " << numberofdivisors(n) << endl;
+	cout << "The sum of the divisors of this number is: " << sumofdivisors(n) << endl;
+	if (uniquenumbers(n) == 0)
 		cout << "The digits in this number appear less than once, which means they are unique" << endl;
 	else cout << "The digits in this number appear more than once, which means they aren't unique" << endl;
 	Fibonacci(n);
-	if (wielokrotnosc(n) == 0)
+	if (multiple(n) == 0)
 		cout << "This number is a multiple of the square of an integer greater than 2" << endl;
 	else
 		cout << "This number isn't a multiple of the square of an integer greater than 2" << endl;
@@ -187,22 +187,22 @@ int main() {
 
 	cout << "For the number " << m << endl;
 	cout << endl;
-	cout << "The sum of the squares of this number is: " << sumakwadratow(m) << endl;
-	cout << "The quantity of divisors of this number is: " << liczbapodzielnikow(m) << endl;
-	cout << "The sum of the divisors of this number is: " << sumapodzielnikow(m) << endl;
-	if (liczbyunikalne(m) == 0)
+	cout << "The sum of the squares of this number is: " << sumofsquares(m) << endl;
+	cout << "The quantity of divisors of this number is: " << numberofdivisors(m) << endl;
+	cout << "The sum of the divisors of this number is: " << sumofdivisors(m) << endl;
+	if (uniquenumbers(m) == 0)
 		cout << "The digits in this number appear less than once, which means they are unique" << endl;
 	else cout << "The digits in this number appear more than once, which means they aren't unique" << endl;
 	Fibonacci(m);
-	if (wielokrotnosc(m) == 0)
+	if (multiple(m) == 0)
 		cout << "This number is a multiple of the square of an integer greater than 2" << endl;
 	else
 		cout << "This number isn't a multiple of the square of an integer greater than 2" << endl;
 	cout << endl;
 	cout << endl;
 
-	cout << "The greatest common divisor of these numbers is: " << NWD(n, m) << endl;
-	cout << "The least common multiple of these numbers is: " << NWW(n, m) << endl;
+	cout << "The greatest common divisor of these numbers is: " << greatestcommondivisor(n, m) << endl;
+	cout << "The least common multiple of these numbers is: " << leastcommonmultiple(n, m) << endl;
 
 	return 0;
 }
